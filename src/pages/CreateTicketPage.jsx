@@ -143,7 +143,7 @@ export default function CreateTicketPage() {
           <p className="page-subtitle">Describe your issue and our AI system will automatically route it to the correct department.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 28, alignItems: 'start' }}>
+        <div className="create-ticket-grid">
           
           {/* Left Form */}
           <div className="card">

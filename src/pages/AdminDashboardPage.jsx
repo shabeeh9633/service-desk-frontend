@@ -327,7 +327,7 @@ export default function AdminDashboardPage() {
                                 <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>{agent.email}</div>
                               </div>
                             </div>
-                            <div style={{ display: "flex", gap: 6 }}>
+                            <div className="leaderboard-agent-badges" style={{ display: "flex", gap: 6 }}>
                               <span style={{ background: "var(--accent-1-light)", color: "var(--accent-1)", fontSize: "0.72rem", fontWeight: 700, padding: "3px 8px", borderRadius: 6 }}>
                                 {agent.resolved_count} res
                               </span>
@@ -365,7 +365,7 @@ export default function AdminDashboardPage() {
                     </div>
                   </div>
 
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr 1fr", gap: 28 }}>
+                  <div className="admin-analytics-grid">
                     {/* Branch Breakdown */}
                     <div>
                       <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 14 }}>

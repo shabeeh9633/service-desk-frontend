@@ -110,7 +110,7 @@ export default function RegisterPage() {
           <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 8, textAlign: 'center' }}>
             Choose Account Type to Register
           </div>
-          <div style={{ display: 'flex', gap: 12, marginBottom: 16 }}>
+          <div className="reg-account-type-row" style={{ display: 'flex', gap: 12, marginBottom: 16 }}>
             <button
               type="button"
               className={`btn ${accountType === 'user' ? 'btn-primary' : 'btn-outline'}`}
@@ -158,7 +158,7 @@ export default function RegisterPage() {
           </div>
 
           {accountType && (
-            <div className="fade-in" style={{ display: 'flex', justifyContent: 'center', marginTop: 14 }}>
+            <div className="fade-in google-login-wrap" style={{ marginTop: 14 }}>
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
                   if (credentialResponse?.credential) {

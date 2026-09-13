@@ -160,7 +160,7 @@ export default function LoginPage() {
             </div>
 
             {/* ── Google Sign-In ── */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="google-login-wrap">
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
                   if (credentialResponse?.credential) {

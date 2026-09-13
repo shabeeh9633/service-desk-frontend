@@ -48,17 +48,9 @@ function ChatbotWidget() {
       {/* Floating Toggle Button */}
       <button
         id="chatbot-toggle"
+        className="chatbot-toggle-btn"
         onClick={() => setOpen(o => !o)}
         title="IT Support Assistant"
-        style={{
-          position: 'fixed', bottom: 28, right: 28, zIndex: 1000,
-          width: 52, height: 52, borderRadius: '50%',
-          background: 'var(--accent-gradient)',
-          border: 'none', color: '#fff',
-          boxShadow: '0 8px 24px rgba(79,70,229,0.35)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          cursor: 'pointer', transition: 'transform 0.2s ease',
-        }}
         onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.08)'}
         onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
       >
@@ -67,15 +59,7 @@ function ChatbotWidget() {
 
       {/* Chat Panel */}
       {open && (
-        <div style={{
-          position: 'fixed', bottom: 92, right: 28, zIndex: 999,
-          width: 360, height: 480,
-          background: '#fff', borderRadius: 20,
-          border: '1px solid var(--border)',
-          boxShadow: '0 20px 60px rgba(15,23,42,0.12)',
-          display: 'flex', flexDirection: 'column',
-          overflow: 'hidden', animation: 'fadeIn 0.2s ease',
-        }}>
+        <div className="chatbot-panel">
           {/* Header */}
           <div style={{
             background: 'var(--accent-gradient)',

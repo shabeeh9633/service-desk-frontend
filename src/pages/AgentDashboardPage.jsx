@@ -157,7 +157,7 @@ export default function AgentDashboardPage() {
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   {overdueTickets.slice(0, 3).map(t => (
-                    <div key={t.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", border: "1px solid rgba(220,38,38,0.15)", padding: "8px 12px", borderRadius: "var(--radius-sm)", fontSize: "0.8rem", gap: 12, minWidth: 280 }}>
+                    <div key={t.id} className="agent-sla-ticket-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", border: "1px solid rgba(220,38,38,0.15)", padding: "8px 12px", borderRadius: "var(--radius-sm)", fontSize: "0.8rem", gap: 12, minWidth: 280 }}>
                       <span style={{ fontWeight: 600 }}>#{t.id} — {t.title}</span>
                       <button className="btn btn-danger btn-xs" onClick={() => navigate(`/tickets/${t.id}`)}>
                         Resolve
@@ -169,7 +169,7 @@ export default function AgentDashboardPage() {
             )}
 
             {/* ── Metrics + Workload ── */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 260px", gap: 20 }}>
+            <div className="agent-metrics-grid">
               <div className="grid-2" style={{ gap: 16 }}>
                 <MetricCard icon={IconTrophy}      label="Tickets Resolved"    value={metrics.resolved_count}    color="var(--accent-1)" />
                 <MetricCard icon={IconStar}         label="Average Rating"      value={`${metrics.avg_rating} / 5`} color="var(--warning)" />
@@ -207,7 +207,7 @@ export default function AgentDashboardPage() {
             </div>
 
             {/* ── Daily Performance + Queue ── */}
-            <div style={{ display: "grid", gridTemplateColumns: "260px 1fr", gap: 20 }}>
+            <div className="agent-queue-grid">
 
               {/* Daily Bar Chart */}
               <div className="card" style={{ display: "flex", flexDirection: "column" }}>
